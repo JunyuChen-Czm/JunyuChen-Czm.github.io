@@ -829,34 +829,75 @@
       color: var(--muted);
     }
 
-    .projects {
+    .projects-head {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 16px;
+      margin-bottom: 18px;
+    }
+
+    .projects-subtitle {
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.7;
+      max-width: 620px;
+    }
+
+    .projects-layout {
       display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
       gap: 16px;
     }
 
     .project-card {
+      position: relative;
       display: flex;
       flex-direction: column;
       gap: 14px;
       min-height: 100%;
-      padding: 20px;
+      padding: 22px;
       border: 1px solid var(--line);
       border-radius: var(--radius-lg);
       background:
         linear-gradient(180deg, rgba(20, 15, 11, 0.96), rgba(10, 8, 7, 0.94));
+      box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.03),
+        0 18px 34px rgba(0, 0, 0, 0.22);
       transition: transform 0.28s ease, border-color 0.28s ease, box-shadow 0.28s ease;
+    }
+
+    .project-card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border-radius: inherit;
+      background:
+        linear-gradient(120deg, rgba(240, 207, 142, 0.06), transparent 40%),
+        radial-gradient(circle at top right, rgba(212, 176, 106, 0.08), transparent 28%);
+      pointer-events: none;
     }
 
     .project-card:hover {
       transform: translateY(-4px);
       border-color: rgba(212, 176, 106, 0.22);
-      box-shadow: 0 18px 34px rgba(0, 0, 0, 0.26);
+      box-shadow: 0 22px 40px rgba(0, 0, 0, 0.28);
+    }
+
+    .project-card-featured {
+      padding: 28px;
+    }
+
+    .project-feature-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
     }
 
     .project-badge {
       width: fit-content;
-      padding: 6px 10px;
+      padding: 7px 12px;
       border-radius: 999px;
       background: rgba(240, 207, 142, 0.08);
       border: 1px solid rgba(240, 207, 142, 0.16);
@@ -865,6 +906,98 @@
       font-weight: 700;
       letter-spacing: 0.08em;
       text-transform: uppercase;
+    }
+
+    .project-year {
+      color: #ead6ad;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .project-feature-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.5fr) 250px;
+      gap: 22px;
+      align-items: start;
+    }
+
+    .project-title {
+      display: block;
+      font-size: 18px;
+      color: var(--ink);
+    }
+
+    .project-card-featured .project-title {
+      font-size: 30px;
+      line-height: 1.28;
+      margin-top: 2px;
+    }
+
+    .project-meta-line {
+      margin-top: 10px;
+      color: #ead6ad;
+      line-height: 1.75;
+      font-size: 15px;
+      font-weight: 600;
+    }
+
+    .project-copy {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.8;
+    }
+
+    .project-feature-copy .project-copy {
+      margin-top: 14px;
+      font-size: 15px;
+      line-height: 1.9;
+    }
+
+    .project-feature-side {
+      display: grid;
+      gap: 12px;
+    }
+
+    .project-mini-panel {
+      padding: 14px 14px 13px;
+      border-radius: 16px;
+      border: 1px solid rgba(212, 176, 106, 0.14);
+      background: rgba(255, 255, 255, 0.02);
+    }
+
+    .project-mini-label {
+      display: block;
+      margin-bottom: 6px;
+      color: var(--muted);
+      font-size: 12px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      font-weight: 700;
+    }
+
+    .project-mini-value {
+      color: var(--ink);
+      font-size: 15px;
+      line-height: 1.7;
+      font-weight: 700;
+    }
+
+    .project-secondary-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .project-card-compact .project-title {
+      font-size: 22px;
+      line-height: 1.4;
+    }
+
+    .project-card-compact .project-copy {
+      font-size: 15px;
+      line-height: 1.85;
     }
 
     .project-links,
@@ -879,9 +1012,11 @@
 
     .project-links {
       margin-top: auto;
+      padding-top: 2px;
     }
 
-    .project-copy strong {
+    .project-copy strong,
+    .project-meta-line strong {
       color: var(--ink);
       font-weight: 800;
     }
@@ -958,6 +1093,11 @@
       .contact-links {
         justify-content: flex-start;
       }
+
+      .project-feature-grid,
+      .project-secondary-grid {
+        grid-template-columns: 1fr;
+      }
     }
 
     @media (max-width: 760px) {
@@ -991,7 +1131,8 @@
       }
 
       .news-head,
-      .publications-head {
+      .publications-head,
+      .projects-head {
         align-items: flex-start;
         flex-direction: column;
       }
@@ -1329,19 +1470,35 @@
     </section>
 
     <section class="projects-wrap panel" id="projects">
-      <h2>
-        <span data-lang="zh">项目展示</span>
-        <span data-lang="en">Selected Projects</span>
-      </h2>
+      <div class="projects-head">
+        <div>
+          <h2>
+            <span data-lang="zh">项目展示</span>
+            <span data-lang="en">Selected Projects</span>
+          </h2>
+          <p class="projects-subtitle" data-lang="zh">
+            这里展示我目前最想重点呈现的研究项目、方向性工作与代表性成果。
+          </p>
+          <p class="projects-subtitle" data-lang="en">
+            This section highlights the research project, direction-specific work, and representative achievement I want to showcase most.
+          </p>
+        </div>
+      </div>
 
-        <div class="projects">
-          <article class="project-card">
-            <span class="project-badge">ECCV 2026</span>
-            <div>
+      <div class="projects-layout">
+        <article class="project-card project-card-featured">
+          <div class="project-feature-top">
+            <span class="project-badge">Featured Project</span>
+            <span class="project-year">ECCV 2026</span>
+          </div>
+
+          <div class="project-feature-grid">
+            <div class="project-feature-copy">
               <strong class="project-title">
                 <span data-lang="zh">CMDS-AD: Cross-Modal Dual-Stream Decoupling for Few-Shot Anomaly Detection</span>
                 <span data-lang="en">CMDS-AD: Cross-Modal Dual-Stream Decoupling for Few-Shot Anomaly Detection</span>
               </strong>
+
               <p class="project-copy" data-lang="zh">
                 这是一个面向小样本异常检测的跨模态工作，结合 RGB 与 3D 几何信息，通过双流解耦设计、
                 跨模态语义对齐与噪声抑制机制，提升极少样本条件下的异常检测性能。
@@ -1351,43 +1508,86 @@
                 It introduces a dual-stream decoupling design, cross-modal semantic alignment, and noise suppression
                 to improve anomaly detection under extremely limited data settings.
               </p>
-              <p class="project-copy" data-lang="zh">
+
+              <p class="project-meta-line" data-lang="zh">
                 作者：Junhao Cai, Deyu Zeng, Junhao Pang, <strong>Junyu Chen</strong>, Qiwei Liang, Xiaopin Zhong, Zongze Wu
               </p>
-              <p class="project-copy" data-lang="en">
+              <p class="project-meta-line" data-lang="en">
                 Authors: Junhao Cai, Deyu Zeng, Junhao Pang, <strong>Junyu Chen</strong>, Qiwei Liang, Xiaopin Zhong, Zongze Wu
               </p>
             </div>
-            <div class="project-links">
-              <a href="https://github.com/Junhaocai27/CMDS-AD/tree/main" target="_blank" rel="noreferrer">Code</a>
-            </div>
-          </article>
 
-        <article class="project-card">
-          <span class="project-badge">Research</span>
-          <div>
-            <strong class="project-title">
-              <span data-lang="zh">工业异常检测相关项目</span>
-              <span data-lang="en">Industrial Anomaly Detection Work</span>
-            </strong>
-            <p class="project-copy" data-lang="zh">
-              如果你有异常检测、视觉质检、模型部署或工程落地相关项目，可以优先放在这里。
-            </p>
-            <p class="project-copy" data-lang="en">
-              If you have work related to anomaly detection, visual inspection,
-              model deployment, or industrial applications, this is a good place to highlight it first.
-            </p>
+            <div class="project-feature-side">
+              <div class="project-mini-panel">
+                <span class="project-mini-label">
+                  <span data-lang="zh">类型</span>
+                  <span data-lang="en">Type</span>
+                </span>
+                <span class="project-mini-value">
+                  <span data-lang="zh">研究项目</span>
+                  <span data-lang="en">Research Project</span>
+                </span>
+              </div>
+
+              <div class="project-mini-panel">
+                <span class="project-mini-label">
+                  <span data-lang="zh">方向</span>
+                  <span data-lang="en">Focus</span>
+                </span>
+                <span class="project-mini-value">
+                  <span data-lang="zh">多模态异常检测</span>
+                  <span data-lang="en">Multimodal Anomaly Detection</span>
+                </span>
+              </div>
+
+              <div class="project-mini-panel">
+                <span class="project-mini-label">
+                  <span data-lang="zh">状态</span>
+                  <span data-lang="en">Status</span>
+                </span>
+                <span class="project-mini-value">
+                  <span data-lang="zh">ECCV 2026 录用</span>
+                  <span data-lang="en">Accepted by ECCV 2026</span>
+                </span>
+              </div>
+            </div>
           </div>
+
           <div class="project-links">
-            <a href="#contact">
-              <span data-lang="zh">后续更新</span>
-              <span data-lang="en">Update Later</span>
+            <a href="https://github.com/Junhaocai27/CMDS-AD/tree/main" target="_blank" rel="noreferrer">Code</a>
+            <a href="#publications">
+              <span data-lang="zh">查看论文</span>
+              <span data-lang="en">View Publication</span>
             </a>
           </div>
         </article>
 
-          <article class="project-card">
-            <span class="project-badge">Award</span>
+        <div class="project-secondary-grid">
+          <article class="project-card project-card-compact">
+            <span class="project-badge">Research Direction</span>
+            <div>
+              <strong class="project-title">
+                <span data-lang="zh">工业异常检测相关项目</span>
+                <span data-lang="en">Industrial Anomaly Detection Work</span>
+              </strong>
+              <p class="project-copy" data-lang="zh">
+                这里将继续整理我在工业异常检测、多模态感知、AI 视觉与模型落地相关方向上的后续项目和阶段性工作。
+              </p>
+              <p class="project-copy" data-lang="en">
+                This card will continue to gather my follow-up work in industrial anomaly detection,
+                multimodal perception, AI vision, and practical model deployment.
+              </p>
+            </div>
+            <div class="project-links">
+              <a href="#contact">
+                <span data-lang="zh">后续更新</span>
+                <span data-lang="en">Update Later</span>
+              </a>
+            </div>
+          </article>
+
+          <article class="project-card project-card-compact">
+            <span class="project-badge">Honors &amp; Awards</span>
             <div>
               <strong class="project-title">
                 <span data-lang="zh">荣誉奖励</span>
@@ -1407,6 +1607,7 @@
             </div>
           </article>
         </div>
+      </div>
     </section>
 
     <section class="timeline-wrap panel" id="experience">
