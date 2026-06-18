@@ -1,1 +1,124 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Junyu Chen</title>
+  <style>
+    :root{--bg:#f4f7fb;--panel:#ffffff;--ink:#0f172a;--muted:#52607a;--line:#dbe4f0;--blue:#123c73;--gold:#d97706;}
+    *{box-sizing:border-box} body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;color:var(--ink);background:radial-gradient(circle at top,#eef4ff 0,#f4f7fb 45%,#eef1f6 100%)}
+    a{color:inherit;text-decoration:none} .shell{max-width:1080px;margin:0 auto;padding:32px 20px 56px}
+    .hero,.panel{background:rgba(255,255,255,.82);backdrop-filter:blur(8px);border:1px solid rgba(219,228,240,.9);border-radius:24px;box-shadow:0 20px 50px rgba(15,23,42,.08)}
+    .hero{padding:56px 32px 34px;position:relative;overflow:hidden}
+    .hero:before{content:"";position:absolute;right:-80px;top:-80px;width:260px;height:260px;border-radius:50%;background:radial-gradient(circle,rgba(217,119,6,.18),rgba(18,60,115,0) 68%)}
+    .eyebrow{margin:0 0 10px;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);font-weight:700}
+    h1{margin:0;font-size:clamp(40px,8vw,72px);line-height:.95;font-family:Georgia,"Times New Roman",serif}
+    .lead{max-width:720px;margin:18px 0 0;color:var(--muted);font-size:18px;line-height:1.8}
+    .actions{display:flex;gap:14px;flex-wrap:wrap;margin-top:28px}
+    .btn{padding:12px 18px;border-radius:999px;border:1px solid var(--blue);font-weight:700}
+    .btn.primary{background:var(--blue);color:#fff}.btn.secondary{background:#fff;color:var(--blue)}
+    .grid{display:grid;grid-template-columns:1.15fr .85fr;gap:18px;margin-top:18px}
+    .panel{padding:26px}
+    h2{margin:0 0 14px;font-size:14px;letter-spacing:.16em;text-transform:uppercase;color:var(--blue)}
+    p{margin:0;color:var(--muted);line-height:1.8}
+    .tags{display:flex;flex-wrap:wrap;gap:10px;margin-top:12px}
+    .tag{padding:8px 12px;border-radius:999px;background:#eef4ff;color:var(--blue);font-size:14px;font-weight:700}
+    .projects{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    .card{padding:18px;border:1px solid var(--line);border-radius:18px;background:linear-gradient(180deg,#fff,#f9fbff)}
+    .card strong{display:block;font-size:18px;margin-bottom:8px}
+    .card span{display:block;color:var(--muted);font-size:14px;line-height:1.7}
+    .meta{margin-top:12px;font-size:13px;color:var(--blue);font-weight:700}
+    .timeline{display:grid;gap:14px}
+    .item{padding:16px 0;border-top:1px solid var(--line)} .item:first-child{border-top:0;padding-top:0}
+    .item strong{display:block;font-size:17px}.item em{display:block;margin-top:4px;font-style:normal;color:var(--blue);font-size:14px;font-weight:700}
+    .contact{display:flex;justify-content:space-between;gap:20px;align-items:center}
+    .contact-links{display:flex;gap:16px;flex-wrap:wrap;color:var(--blue);font-weight:700}
+    @media (max-width:860px){.grid,.projects,.contact{grid-template-columns:1fr;display:grid}.hero{padding:42px 22px 28px}.panel{padding:22px}}
+  </style>
+</head>
+<body>
+  <main class="shell">
+    <section class="hero">
+      <p class="eyebrow">Personal Site</p>
+      <h1>Junyu Chen</h1>
+      <p class="lead">
+        I am a [your role] focused on [your direction]. I enjoy building thoughtful work
+        at the intersection of technology, design, and real-world impact.
+      </p>
+      <div class="actions">
+        <a class="btn primary" href="#projects">View Projects</a>
+        <a class="btn secondary" href="#contact">Contact Me</a>
+      </div>
+    </section>
 
+    <section class="grid">
+      <article class="panel">
+        <h2>About</h2>
+        <p>
+          Write a short introduction here. Keep it to 3 to 5 sentences: who you are,
+          what you study or build, what kinds of problems interest you, and what you are
+          currently exploring.
+        </p>
+      </article>
+      <article class="panel">
+        <h2>Focus</h2>
+        <div class="tags">
+          <span class="tag">Research</span>
+          <span class="tag">Engineering</span>
+          <span class="tag">Projects</span>
+          <span class="tag">Writing</span>
+        </div>
+      </article>
+    </section>
+
+    <section class="panel" id="projects" style="margin-top:18px">
+      <h2>Selected Projects</h2>
+      <div class="projects">
+        <article class="card">
+          <strong>Project One</strong>
+          <span>A concise one-sentence description of your first project.</span>
+          <div class="meta"><a href="#">GitHub</a> / <a href="#">Demo</a></div>
+        </article>
+        <article class="card">
+          <strong>Project Two</strong>
+          <span>A concise one-sentence description of your second project.</span>
+          <div class="meta"><a href="#">GitHub</a> / <a href="#">Case Study</a></div>
+        </article>
+        <article class="card">
+          <strong>Project Three</strong>
+          <span>A concise one-sentence description of your third project.</span>
+          <div class="meta"><a href="#">GitHub</a> / <a href="#">More</a></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="panel" style="margin-top:18px">
+      <h2>Experience</h2>
+      <div class="timeline">
+        <div class="item">
+          <strong>[Your current role or school]</strong>
+          <em>2025 - Present</em>
+          <p>One short sentence about what you are doing now.</p>
+        </div>
+        <div class="item">
+          <strong>[Previous experience]</strong>
+          <em>2023 - 2025</em>
+          <p>One short sentence about your previous experience.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel contact" id="contact" style="margin-top:18px">
+      <div>
+        <h2>Contact</h2>
+        <p>If you would like to collaborate, discuss ideas, or just say hello, feel free to reach out.</p>
+      </div>
+      <div class="contact-links">
+        <a href="mailto:your_email@example.com">Email</a>
+        <a href="https://github.com/JunyuChen-Czm">GitHub</a>
+        <a href="#">CV</a>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
