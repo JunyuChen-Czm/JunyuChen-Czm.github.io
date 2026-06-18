@@ -3,122 +3,1528 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Junyu Chen</title>
+  <title>Junyu Chen | Personal Homepage</title>
+  <meta
+    name="description"
+    content="Junyu Chen's bilingual personal homepage with profile, research direction, selected work, and contact information."
+  />
   <style>
-    :root{--bg:#f4f7fb;--panel:#ffffff;--ink:#0f172a;--muted:#52607a;--line:#dbe4f0;--blue:#123c73;--gold:#d97706;}
-    *{box-sizing:border-box} body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;color:var(--ink);background:radial-gradient(circle at top,#eef4ff 0,#f4f7fb 45%,#eef1f6 100%)}
-    a{color:inherit;text-decoration:none} .shell{max-width:1080px;margin:0 auto;padding:32px 20px 56px}
-    .hero,.panel{background:rgba(255,255,255,.82);backdrop-filter:blur(8px);border:1px solid rgba(219,228,240,.9);border-radius:24px;box-shadow:0 20px 50px rgba(15,23,42,.08)}
-    .hero{padding:56px 32px 34px;position:relative;overflow:hidden}
-    .hero:before{content:"";position:absolute;right:-80px;top:-80px;width:260px;height:260px;border-radius:50%;background:radial-gradient(circle,rgba(217,119,6,.18),rgba(18,60,115,0) 68%)}
-    .eyebrow{margin:0 0 10px;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);font-weight:700}
-    h1{margin:0;font-size:clamp(40px,8vw,72px);line-height:.95;font-family:Georgia,"Times New Roman",serif}
-    .lead{max-width:720px;margin:18px 0 0;color:var(--muted);font-size:18px;line-height:1.8}
-    .actions{display:flex;gap:14px;flex-wrap:wrap;margin-top:28px}
-    .btn{padding:12px 18px;border-radius:999px;border:1px solid var(--blue);font-weight:700}
-    .btn.primary{background:var(--blue);color:#fff}.btn.secondary{background:#fff;color:var(--blue)}
-    .grid{display:grid;grid-template-columns:1.15fr .85fr;gap:18px;margin-top:18px}
-    .panel{padding:26px}
-    h2{margin:0 0 14px;font-size:14px;letter-spacing:.16em;text-transform:uppercase;color:var(--blue)}
-    p{margin:0;color:var(--muted);line-height:1.8}
-    .tags{display:flex;flex-wrap:wrap;gap:10px;margin-top:12px}
-    .tag{padding:8px 12px;border-radius:999px;background:#eef4ff;color:var(--blue);font-size:14px;font-weight:700}
-    .projects{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-    .card{padding:18px;border:1px solid var(--line);border-radius:18px;background:linear-gradient(180deg,#fff,#f9fbff)}
-    .card strong{display:block;font-size:18px;margin-bottom:8px}
-    .card span{display:block;color:var(--muted);font-size:14px;line-height:1.7}
-    .meta{margin-top:12px;font-size:13px;color:var(--blue);font-weight:700}
-    .timeline{display:grid;gap:14px}
-    .item{padding:16px 0;border-top:1px solid var(--line)} .item:first-child{border-top:0;padding-top:0}
-    .item strong{display:block;font-size:17px}.item em{display:block;margin-top:4px;font-style:normal;color:var(--blue);font-size:14px;font-weight:700}
-    .contact{display:flex;justify-content:space-between;gap:20px;align-items:center}
-    .contact-links{display:flex;gap:16px;flex-wrap:wrap;color:var(--blue);font-weight:700}
-    @media (max-width:860px){.grid,.projects,.contact{grid-template-columns:1fr;display:grid}.hero{padding:42px 22px 28px}.panel{padding:22px}}
+    :root {
+      --bg: #050403;
+      --panel: rgba(14, 11, 8, 0.82);
+      --panel-strong: rgba(20, 15, 11, 0.94);
+      --ink: #f6f0e4;
+      --muted: #b4a692;
+      --line: rgba(212, 176, 106, 0.16);
+      --accent: #d4b06a;
+      --accent-strong: #f0cf8e;
+      --accent-soft: rgba(212, 176, 106, 0.1);
+      --warm: #f0cf8e;
+      --warm-soft: rgba(240, 207, 142, 0.1);
+      --glow-gold: rgba(212, 176, 106, 0.28);
+      --glow-amber: rgba(240, 207, 142, 0.18);
+      --shadow: 0 28px 70px rgba(0, 0, 0, 0.5);
+      --radius-xl: 30px;
+      --radius-lg: 22px;
+      --radius-md: 18px;
+      --heading: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Georgia, serif;
+      --body: "Avenir Next", "Segoe UI Variable", "PingFang SC", "Microsoft YaHei", sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      color-scheme: dark;
+    }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      font-family: var(--body);
+      background:
+        radial-gradient(circle at top left, rgba(212, 176, 106, 0.12), transparent 24%),
+        radial-gradient(circle at top right, rgba(240, 207, 142, 0.1), transparent 22%),
+        radial-gradient(circle at bottom center, rgba(83, 58, 25, 0.26), transparent 34%),
+        linear-gradient(180deg, #020202 0%, #060504 44%, #0b0907 100%);
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+      background-size: 40px 40px;
+      mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.78), transparent 92%);
+      opacity: 0.42;
+      pointer-events: none;
+    }
+
+    body::after {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background:
+        radial-gradient(circle at 50% -10%, rgba(255, 255, 255, 0.06), transparent 38%),
+        radial-gradient(circle at 85% 15%, rgba(240, 207, 142, 0.08), transparent 26%),
+        radial-gradient(circle at 12% 18%, rgba(212, 176, 106, 0.1), transparent 28%);
+      mix-blend-mode: screen;
+      opacity: 0.9;
+      pointer-events: none;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button {
+      font: inherit;
+    }
+
+    .page {
+      position: relative;
+      max-width: 1160px;
+      margin: 0 auto;
+      padding: 24px 20px 64px;
+    }
+
+    .panel {
+      position: relative;
+      isolation: isolate;
+      background:
+        linear-gradient(180deg, rgba(20, 15, 11, 0.94), rgba(9, 8, 7, 0.88)),
+        var(--panel);
+      border: 1px solid var(--line);
+      border-radius: var(--radius-xl);
+      backdrop-filter: blur(18px) saturate(140%);
+      box-shadow:
+        var(--shadow),
+        inset 0 1px 0 rgba(255, 255, 255, 0.05);
+    }
+
+    .panel::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border-radius: inherit;
+      background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.06), transparent 22%),
+        radial-gradient(circle at top right, rgba(212, 176, 106, 0.08), transparent 32%);
+      pointer-events: none;
+    }
+
+    .site-nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      padding: 16px 18px;
+      margin-bottom: 18px;
+    }
+
+    .brand {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    .brand strong {
+      font-family: var(--heading);
+      font-size: 24px;
+      letter-spacing: 0.02em;
+    }
+
+    .brand span {
+      font-size: 13px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: rgba(237, 243, 255, 0.58);
+    }
+
+    .nav-meta {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .nav-links a {
+      padding: 8px 12px;
+      border-radius: 999px;
+      transition: background 0.25s ease, color 0.25s ease, transform 0.25s ease;
+    }
+
+    .nav-links a:hover {
+      background: rgba(212, 176, 106, 0.08);
+      color: #ffffff;
+      transform: translateY(-1px);
+    }
+
+    .lang-switch {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      padding: 4px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(212, 176, 106, 0.14);
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04);
+    }
+
+    .lang-btn {
+      min-width: 52px;
+      height: 36px;
+      border: 0;
+      border-radius: 999px;
+      background: transparent;
+      color: var(--muted);
+      font-weight: 700;
+      cursor: pointer;
+      transition: background 0.25s ease, color 0.25s ease, transform 0.25s ease;
+    }
+
+    .lang-btn:hover {
+      color: var(--accent);
+      transform: translateY(-1px);
+    }
+
+    .lang-btn.is-active {
+      background: linear-gradient(135deg, #b68a43 0%, var(--accent) 52%, var(--accent-strong) 100%);
+      color: #120d08;
+      box-shadow: 0 12px 22px rgba(212, 176, 106, 0.24);
+    }
+
+    [data-lang] {
+      display: none;
+    }
+
+    html[data-current-lang="zh"] span[data-lang="zh"],
+    html[data-current-lang="en"] span[data-lang="en"],
+    html[data-current-lang="zh"] a[data-lang="zh"],
+    html[data-current-lang="en"] a[data-lang="en"] {
+      display: inline;
+    }
+
+    html[data-current-lang="zh"] p[data-lang="zh"],
+    html[data-current-lang="en"] p[data-lang="en"],
+    html[data-current-lang="zh"] ul[data-lang="zh"],
+    html[data-current-lang="en"] ul[data-lang="en"] {
+      display: block;
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0, 1.35fr) minmax(280px, 0.65fr);
+      gap: 18px;
+    }
+
+    .hero-main,
+    .hero-side,
+    .section,
+    .news-wrap,
+    .publications-wrap,
+    .projects-wrap,
+    .timeline-wrap,
+      .contact-wrap {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-main {
+      padding: 34px 34px 30px;
+    }
+
+    .hero-main::after {
+      content: "";
+      position: absolute;
+      right: -80px;
+      bottom: -90px;
+      width: 260px;
+      height: 260px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(212, 176, 106, 0.18), rgba(212, 176, 106, 0) 72%);
+      pointer-events: none;
+    }
+
+    .hero-main::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(115deg, rgba(212, 176, 106, 0.07), transparent 38%),
+        radial-gradient(circle at 15% 20%, rgba(240, 207, 142, 0.08), transparent 22%);
+      pointer-events: none;
+    }
+
+    .hero-head {
+      display: grid;
+      grid-template-columns: 196px minmax(0, 1fr);
+      gap: 28px;
+      align-items: center;
+    }
+
+    .photo-shell {
+      position: relative;
+      aspect-ratio: 4 / 5;
+      border-radius: 26px;
+      padding: 12px;
+      background:
+        linear-gradient(160deg, rgba(25, 19, 13, 0.96), rgba(10, 9, 8, 0.9)),
+        linear-gradient(145deg, rgba(212, 176, 106, 0.14), rgba(240, 207, 142, 0.08));
+      box-shadow:
+        0 26px 42px rgba(0, 0, 0, 0.34),
+        0 0 0 1px rgba(212, 176, 106, 0.08);
+    }
+
+    .photo-shell::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border-radius: 26px;
+      border: 1px solid rgba(212, 176, 106, 0.16);
+      pointer-events: none;
+    }
+
+    .photo-shell::after {
+      content: "";
+      position: absolute;
+      inset: 10px;
+      border-radius: 20px;
+      box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.06),
+        0 0 0 1px rgba(255, 255, 255, 0.03);
+      pointer-events: none;
+    }
+
+    .photo-shell img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+      border-radius: 20px;
+      display: block;
+      filter: saturate(1.02) contrast(1.04);
+    }
+
+    .kicker,
+    h2 {
+      margin: 0;
+      font-size: 12px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--warm);
+      font-weight: 700;
+    }
+
+    h1 {
+      margin: 12px 0 0;
+      font-family: var(--heading);
+      font-size: clamp(44px, 9vw, 78px);
+      line-height: 0.95;
+      letter-spacing: -0.03em;
+      text-shadow: 0 12px 28px rgba(0, 0, 0, 0.3);
+    }
+
+    .identity {
+      margin-top: 16px;
+      font-size: 18px;
+      color: #ead6ad;
+      font-weight: 700;
+      line-height: 1.7;
+    }
+
+    .lead {
+      max-width: 740px;
+      margin: 18px 0 0;
+      font-size: 17px;
+      line-height: 1.9;
+      color: var(--muted);
+    }
+
+    .accent-note {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      margin-top: 18px;
+      padding: 9px 14px;
+      border-radius: 999px;
+      background: rgba(240, 207, 142, 0.08);
+      border: 1px solid rgba(240, 207, 142, 0.14);
+      color: var(--warm);
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04);
+    }
+
+    .accent-note::before {
+      content: "";
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: currentColor;
+    }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 28px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      min-height: 48px;
+      padding: 0 20px;
+      border-radius: 999px;
+      font-weight: 700;
+      border: 1px solid transparent;
+      transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease, border-color 0.25s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 16px 30px rgba(0, 0, 0, 0.24);
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, #8e6a34 0%, #cda45a 58%, #f0cf8e 100%);
+      color: #120d08;
+      box-shadow: 0 14px 28px rgba(212, 176, 106, 0.22);
+    }
+
+    .btn-secondary {
+      background: rgba(255, 255, 255, 0.04);
+      border-color: rgba(212, 176, 106, 0.16);
+      color: #f2e8d4;
+    }
+
+    .hero-side {
+      display: grid;
+      gap: 18px;
+      align-content: start;
+    }
+
+    .info-card {
+      padding: 26px 24px;
+      background:
+        linear-gradient(180deg, rgba(22, 16, 12, 0.96), rgba(10, 9, 8, 0.9)),
+        linear-gradient(135deg, rgba(212, 176, 106, 0.06), rgba(240, 207, 142, 0.03));
+    }
+
+    .info-copy,
+    .section p,
+    .project-copy,
+    .timeline-copy,
+    .contact-wrap p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.8;
+    }
+
+    .fact-list {
+      display: grid;
+      gap: 14px;
+      margin-top: 18px;
+    }
+
+    .fact {
+      padding-top: 14px;
+      border-top: 1px solid var(--line);
+    }
+
+    .fact:first-child {
+      padding-top: 0;
+      border-top: 0;
+    }
+
+    .fact strong,
+    .timeline-title,
+    .project-title {
+      display: block;
+      font-size: 18px;
+      color: var(--ink);
+    }
+
+    .fact-value,
+    .timeline-meta {
+      display: block;
+      margin-top: 4px;
+      color: #ead6ad;
+      font-size: 14px;
+      font-weight: 700;
+      line-height: 1.6;
+    }
+
+    .link-list {
+      display: grid;
+      gap: 12px;
+      margin-top: 18px;
+      font-size: 15px;
+      color: var(--accent);
+      font-weight: 700;
+    }
+
+    .link-list a:hover {
+      color: var(--warm);
+    }
+
+    .link-row {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 10px;
+      padding-top: 12px;
+      border-top: 1px solid var(--line);
+    }
+
+    .link-row:first-child {
+      padding-top: 0;
+      border-top: 0;
+    }
+
+    .link-row span {
+      color: var(--muted);
+      font-size: 13px;
+      font-weight: 600;
+      text-align: right;
+      word-break: break-all;
+    }
+
+    .section-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+      margin-top: 18px;
+    }
+
+    .section,
+    .news-wrap,
+    .publications-wrap,
+    .projects-wrap,
+    .timeline-wrap,
+      .contact-wrap {
+      padding: 30px 26px;
+    }
+
+    .section h2,
+    .news-wrap h2,
+    .publications-wrap h2,
+    .projects-wrap h2,
+    .timeline-wrap h2,
+    .contact-wrap h2 {
+      margin-bottom: 16px;
+    }
+
+    .chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .chip {
+      padding: 10px 14px;
+      border-radius: 999px;
+      background: rgba(212, 176, 106, 0.08);
+      border: 1px solid rgba(212, 176, 106, 0.12);
+      color: #f2dfb7;
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    .note-list {
+      margin: 0;
+      padding-left: 18px;
+      color: var(--muted);
+    }
+
+    .note-list li {
+      line-height: 1.8;
+    }
+
+    .news-wrap,
+    .publications-wrap,
+    .projects-wrap,
+    .timeline-wrap,
+      .contact-wrap {
+      margin-top: 18px;
+    }
+
+    .news-head {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 16px;
+      margin-bottom: 18px;
+    }
+
+    .news-subtitle {
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.7;
+      max-width: 560px;
+    }
+
+    .news-list {
+      display: grid;
+      gap: 14px;
+    }
+
+    .news-item {
+      position: relative;
+      padding: 22px 22px 20px;
+      border-radius: var(--radius-lg);
+      border: 1px solid rgba(212, 176, 106, 0.16);
+      background:
+        linear-gradient(180deg, rgba(24, 18, 13, 0.96), rgba(10, 8, 7, 0.94));
+      box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.03),
+        0 18px 34px rgba(0, 0, 0, 0.22);
+    }
+
+    .news-item::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border-radius: inherit;
+      background:
+        linear-gradient(120deg, rgba(240, 207, 142, 0.08), transparent 42%),
+        radial-gradient(circle at top right, rgba(212, 176, 106, 0.1), transparent 28%);
+      pointer-events: none;
+    }
+
+    .news-meta {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+      margin-bottom: 12px;
+      flex-wrap: wrap;
+    }
+
+    .news-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 7px 12px;
+      border-radius: 999px;
+      border: 1px solid rgba(240, 207, 142, 0.18);
+      background: rgba(240, 207, 142, 0.08);
+      color: var(--warm);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .news-tag::before {
+      content: "";
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: currentColor;
+      box-shadow: 0 0 10px rgba(240, 207, 142, 0.4);
+    }
+
+    .news-date {
+      color: #ead6ad;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .news-title {
+      margin: 0;
+      color: var(--ink);
+      font-size: 22px;
+      line-height: 1.45;
+      font-weight: 700;
+    }
+
+    .news-copy {
+      margin: 10px 0 0;
+      color: var(--muted);
+      line-height: 1.8;
+      font-size: 15px;
+    }
+
+    .publications-head {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 16px;
+      margin-bottom: 18px;
+    }
+
+    .publications-subtitle {
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.7;
+      max-width: 620px;
+    }
+
+    .publication-group {
+      display: grid;
+      grid-template-columns: 96px minmax(0, 1fr);
+      gap: 18px;
+      align-items: start;
+    }
+
+    .publication-year {
+      position: sticky;
+      top: 18px;
+      width: fit-content;
+      padding: 8px 12px;
+      border-radius: 999px;
+      border: 1px solid rgba(240, 207, 142, 0.18);
+      background: rgba(240, 207, 142, 0.08);
+      color: var(--warm);
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .publication-list {
+      display: grid;
+      gap: 16px;
+    }
+
+    .publication-card {
+      position: relative;
+      padding: 22px 22px 20px;
+      border-radius: var(--radius-lg);
+      border: 1px solid rgba(212, 176, 106, 0.16);
+      background:
+        linear-gradient(180deg, rgba(21, 16, 12, 0.96), rgba(10, 8, 7, 0.94));
+      box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.03),
+        0 18px 34px rgba(0, 0, 0, 0.22);
+      transition: transform 0.28s ease, border-color 0.28s ease, box-shadow 0.28s ease;
+    }
+
+    .publication-card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(240, 207, 142, 0.22);
+      box-shadow: 0 22px 40px rgba(0, 0, 0, 0.28);
+    }
+
+    .publication-card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border-radius: inherit;
+      background:
+        linear-gradient(120deg, rgba(240, 207, 142, 0.08), transparent 46%),
+        radial-gradient(circle at top right, rgba(212, 176, 106, 0.09), transparent 28%);
+      pointer-events: none;
+    }
+
+    .publication-meta {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-bottom: 12px;
+    }
+
+    .publication-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 7px 12px;
+      border-radius: 999px;
+      border: 1px solid rgba(240, 207, 142, 0.18);
+      background: rgba(240, 207, 142, 0.08);
+      color: var(--warm);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .publication-badge::before {
+      content: "";
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: currentColor;
+      box-shadow: 0 0 10px rgba(240, 207, 142, 0.4);
+    }
+
+    .publication-date {
+      color: #ead6ad;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .publication-title {
+      margin: 0;
+      color: var(--ink);
+      font-size: 24px;
+      line-height: 1.4;
+      font-weight: 700;
+    }
+
+    .publication-authors {
+      margin: 10px 0 0;
+      color: #ead6ad;
+      line-height: 1.75;
+      font-size: 15px;
+      font-weight: 600;
+    }
+
+    .publication-authors strong {
+      color: var(--ink);
+      font-weight: 800;
+    }
+
+    .publication-venue {
+      margin: 8px 0 0;
+      color: var(--muted);
+      line-height: 1.7;
+      font-size: 14px;
+      font-style: italic;
+    }
+
+    .publication-copy {
+      margin: 12px 0 0;
+      color: var(--muted);
+      line-height: 1.85;
+      font-size: 15px;
+    }
+
+    .publication-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 14px;
+      color: var(--accent);
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    .publication-link-muted {
+      color: var(--muted);
+    }
+
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .project-card {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      min-height: 100%;
+      padding: 20px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius-lg);
+      background:
+        linear-gradient(180deg, rgba(20, 15, 11, 0.96), rgba(10, 8, 7, 0.94));
+      transition: transform 0.28s ease, border-color 0.28s ease, box-shadow 0.28s ease;
+    }
+
+    .project-card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(212, 176, 106, 0.22);
+      box-shadow: 0 18px 34px rgba(0, 0, 0, 0.26);
+    }
+
+    .project-badge {
+      width: fit-content;
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: rgba(240, 207, 142, 0.08);
+      border: 1px solid rgba(240, 207, 142, 0.16);
+      color: var(--warm);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .project-links,
+    .contact-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      color: var(--accent);
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    .project-links {
+      margin-top: auto;
+    }
+
+    .project-copy strong {
+      color: var(--ink);
+      font-weight: 800;
+    }
+
+    .project-links a:hover,
+    .contact-links a:hover {
+      color: var(--warm);
+    }
+
+    .timeline {
+      display: grid;
+      gap: 18px;
+    }
+
+    .timeline-item {
+      display: grid;
+      grid-template-columns: 150px minmax(0, 1fr);
+      gap: 18px;
+      padding-top: 18px;
+      border-top: 1px solid var(--line);
+    }
+
+    .timeline-item:first-child {
+      padding-top: 0;
+      border-top: 0;
+    }
+
+    .timeline-year {
+      color: var(--warm);
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .contact-wrap {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 18px;
+      align-items: end;
+    }
+
+    .contact-links {
+      justify-content: flex-end;
+    }
+
+    .footer-note {
+      margin-top: 18px;
+      padding: 14px 4px 0;
+      color: var(--muted);
+      font-size: 13px;
+      text-align: center;
+    }
+
+    @media (max-width: 980px) {
+      .hero,
+      .section-grid,
+      .projects,
+      .contact-wrap {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-main,
+      .info-card,
+      .section,
+      .news-wrap,
+      .publications-wrap,
+      .projects-wrap,
+      .timeline-wrap,
+        .contact-wrap {
+        padding: 24px 20px;
+      }
+
+      .contact-links {
+        justify-content: flex-start;
+      }
+    }
+
+    @media (max-width: 760px) {
+      .site-nav {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .nav-meta {
+        width: 100%;
+        justify-content: space-between;
+      }
+
+      .hero-head {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+
+      .photo-shell {
+        width: min(240px, 100%);
+      }
+
+      .identity,
+      .lead {
+        font-size: 16px;
+      }
+
+      .timeline-item {
+        grid-template-columns: 1fr;
+        gap: 8px;
+      }
+
+      .news-head,
+      .publications-head {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .publication-group {
+        grid-template-columns: 1fr;
+        gap: 14px;
+      }
+
+      .publication-year {
+        position: static;
+      }
+    }
   </style>
 </head>
 <body>
-  <main class="shell">
+  <main class="page">
+    <nav class="site-nav panel" aria-label="Primary">
+      <div class="brand">
+        <strong>Junyu Chen</strong>
+        <span>Personal Homepage</span>
+      </div>
+
+      <div class="nav-meta">
+        <div class="nav-links">
+          <a href="#about">
+            <span data-lang="zh">关于我</span>
+            <span data-lang="en">About</span>
+          </a>
+          <a href="#news">
+            <span data-lang="zh">动态</span>
+            <span data-lang="en">News</span>
+          </a>
+          <a href="#publications">
+            <span data-lang="zh">论文</span>
+            <span data-lang="en">Publications</span>
+          </a>
+          <a href="#projects">
+            <span data-lang="zh">项目</span>
+            <span data-lang="en">Projects</span>
+          </a>
+          <a href="#experience">
+            <span data-lang="zh">经历</span>
+            <span data-lang="en">Experience</span>
+          </a>
+          <a href="#contact">
+            <span data-lang="zh">联系</span>
+            <span data-lang="en">Contact</span>
+          </a>
+        </div>
+
+        <div class="lang-switch" role="group" aria-label="Language switcher">
+          <button class="lang-btn" type="button" data-set-lang="zh">中文</button>
+          <button class="lang-btn" type="button" data-set-lang="en">EN</button>
+        </div>
+      </div>
+    </nav>
+
     <section class="hero">
-      <p class="eyebrow">Personal Site</p>
-      <h1>Junyu Chen</h1>
-      <p class="lead">
-        I am a [your role] focused on [your direction]. I enjoy building thoughtful work
-        at the intersection of technology, design, and real-world impact.
-      </p>
-      <div class="actions">
-        <a class="btn primary" href="#projects">View Projects</a>
-        <a class="btn secondary" href="#contact">Contact Me</a>
-      </div>
-    </section>
+      <article class="hero-main panel">
+        <div class="hero-head">
+          <div class="photo-shell">
+            <img src="profile.jpg" alt="Junyu Chen portrait" />
+          </div>
 
-    <section class="grid">
-      <article class="panel">
-        <h2>About</h2>
-        <p>
-          Write a short introduction here. Keep it to 3 to 5 sentences: who you are,
-          what you study or build, what kinds of problems interest you, and what you are
-          currently exploring.
-        </p>
-      </article>
-      <article class="panel">
-        <h2>Focus</h2>
-        <div class="tags">
-          <span class="tag">Research</span>
-          <span class="tag">Engineering</span>
-          <span class="tag">Projects</span>
-          <span class="tag">Writing</span>
+          <div>
+            <p class="kicker">
+              <span data-lang="zh">个人主页</span>
+              <span data-lang="en">Personal Site</span>
+            </p>
+
+            <h1>Junyu Chen</h1>
+
+            <div class="identity">
+              <span data-lang="zh">人工智能专业 · 广州航海学院 / 广州交通大学（筹）</span>
+              <span data-lang="en">Artificial Intelligence Major · Guangzhou Maritime University / Guangzhou Jiaotong University (Proposed)</span>
+            </div>
+
+            <p class="lead" data-lang="zh">
+              我目前就读于广州航海学院 / 广州交通大学（筹）人工智能专业，研究兴趣主要集中在人工智能、
+              工业异常检测与 AI 视觉方向。在研究与学习中，我重视严谨的实验过程、可靠的结果验证，
+              也始终把科研精神与学术道德放在非常重要的位置。
+            </p>
+            <p class="lead" data-lang="en">
+              I am currently studying Artificial Intelligence at Guangzhou Maritime University / Guangzhou Jiaotong University (Proposed).
+              My interests focus on artificial intelligence, industrial anomaly detection, and AI vision.
+              In both research and engineering practice, I value rigorous experimentation, reliable validation,
+              and a serious commitment to academic integrity.
+            </p>
+
+            <div class="accent-note">
+              <span data-lang="zh">研究兴趣：人工智能 · 工业异常检测 · AI视觉</span>
+              <span data-lang="en">Research Interests: AI · Industrial Anomaly Detection · AI Vision</span>
+            </div>
+
+            <div class="actions">
+              <a class="btn btn-primary" href="#projects">
+                <span data-lang="zh">查看项目</span>
+                <span data-lang="en">View Projects</span>
+              </a>
+              <a class="btn btn-secondary" href="#contact">
+                <span data-lang="zh">联系我</span>
+                <span data-lang="en">Contact Me</span>
+              </a>
+            </div>
+          </div>
         </div>
       </article>
+
+      <aside class="hero-side">
+        <section class="info-card panel">
+          <h2>
+            <span data-lang="zh">快速信息</span>
+            <span data-lang="en">Quick Snapshot</span>
+          </h2>
+
+          <div class="fact-list">
+            <div class="fact">
+              <strong>
+                <span data-lang="zh">当前身份</span>
+                <span data-lang="en">Current Role</span>
+              </strong>
+              <span class="fact-value">
+                <span data-lang="zh">人工智能专业 · 算法工程方向</span>
+                <span data-lang="en">AI Major · Algorithm Engineering Track</span>
+              </span>
+            </div>
+
+            <div class="fact">
+              <strong>
+                <span data-lang="zh">学校</span>
+                <span data-lang="en">School</span>
+              </strong>
+              <span class="fact-value">
+                <span data-lang="zh">广州航海学院 / 广州交通大学（筹）</span>
+                <span data-lang="en">Guangzhou Maritime University / Guangzhou Jiaotong University (Proposed)</span>
+              </span>
+            </div>
+
+            <div class="fact">
+              <strong>
+                <span data-lang="zh">专业</span>
+                <span data-lang="en">Major</span>
+              </strong>
+              <span class="fact-value">
+                <span data-lang="zh">人工智能专业</span>
+                <span data-lang="en">Artificial Intelligence</span>
+              </span>
+            </div>
+          </div>
+        </section>
+
+        <section class="info-card panel">
+          <h2>
+            <span data-lang="zh">联系方式</span>
+            <span data-lang="en">Direct Contact</span>
+          </h2>
+
+          <div class="link-list">
+            <div class="link-row">
+              <a href="mailto:chenjunyu@gzmtu.edu.cn">Email</a>
+              <span>chenjunyu@gzmtu.edu.cn</span>
+            </div>
+            <div class="link-row">
+              <a href="https://github.com/JunyuChen-Czm" target="_blank" rel="noreferrer">GitHub</a>
+              <span>JunyuChen-Czm</span>
+            </div>
+            <div class="link-row">
+              <strong>WeChat</strong>
+              <span>CjyCzm1874Cyx</span>
+            </div>
+          </div>
+        </section>
+      </aside>
     </section>
 
-    <section class="panel" id="projects" style="margin-top:18px">
-      <h2>Selected Projects</h2>
-      <div class="projects">
-        <article class="card">
-          <strong>Project One</strong>
-          <span>A concise one-sentence description of your first project.</span>
-          <div class="meta"><a href="#">GitHub</a> / <a href="#">Demo</a></div>
+    <section class="section-grid" id="about">
+        <article class="section panel">
+          <h2>
+            <span data-lang="zh">关于我</span>
+            <span data-lang="en">About Me</span>
+          </h2>
+          <p data-lang="zh">
+            我目前就读于广州航海学院 / 广州交通大学（筹）人工智能专业，研究兴趣主要集中在人工智能、
+            工业异常检测与 AI 视觉方向。在深圳大学博士后兼硕士研究生导师曾德宇老师的指导下，
+            我持续关注如何将算法研究与实际工业场景结合起来，并努力在问题定义、实验设计、结果分析与复现规范上保持严谨。
+            我希望通过长期积累，形成兼具研究深度与工程落地能力的技术路径，同时始终坚持精益求精的科研精神与严肃认真的学术道德。
+          </p>
+          <p data-lang="en">
+            I am currently studying Artificial Intelligence at Guangzhou Maritime University / Guangzhou Jiaotong University (Proposed),
+            with research interests in artificial intelligence, industrial anomaly detection, and AI vision.
+            Under the guidance of Dr. Deyu Zeng, a postdoctoral researcher at Shenzhen University and a master's supervisor,
+            I keep exploring how algorithmic research can connect with real industrial scenarios while maintaining rigor in problem formulation,
+            experimental design, result analysis, and reproducibility.
+            I hope to develop both solid research depth and practical engineering ability, while always treating academic integrity
+            and a meticulous research attitude as core personal principles.
+          </p>
         </article>
-        <article class="card">
-          <strong>Project Two</strong>
-          <span>A concise one-sentence description of your second project.</span>
-          <div class="meta"><a href="#">GitHub</a> / <a href="#">Case Study</a></div>
+
+        <article class="section panel">
+          <h2>
+            <span data-lang="zh">技术关键词</span>
+            <span data-lang="en">Keywords</span>
+          </h2>
+          <div class="chips">
+            <span class="chip">Artificial Intelligence</span>
+            <span class="chip">Industrial Anomaly Detection</span>
+            <span class="chip">AI Vision</span>
+            <span class="chip">PyTorch</span>
+            <span class="chip">OpenCV</span>
+            <span class="chip">Model Deployment</span>
+          </div>
         </article>
-        <article class="card">
-          <strong>Project Three</strong>
-          <span>A concise one-sentence description of your third project.</span>
-          <div class="meta"><a href="#">GitHub</a> / <a href="#">More</a></div>
+
+        <article class="section panel">
+          <h2>
+            <span data-lang="zh">目标</span>
+            <span data-lang="en">Goal</span>
+          </h2>
+          <ul class="note-list" data-lang="zh">
+            <li>持续保持精益求精的科研精神与严谨端正的学术道德。</li>
+            <li>在人工智能、工业异常检测与 AI 视觉方向继续积累研究与工程能力。</li>
+            <li>未来三年后报考深圳大学机电学院硕士研究生。</li>
+          </ul>
+          <ul class="note-list" data-lang="en">
+            <li>To maintain a meticulous research attitude and strong academic integrity in all future work.</li>
+            <li>To continue building research and engineering ability in AI, industrial anomaly detection, and AI vision.</li>
+            <li>To apply for a master's program at the College of Mechatronics and Control Engineering, Shenzhen University, in about three years.</li>
+          </ul>
+        </article>
+      </section>
+
+    <section class="news-wrap panel" id="news">
+      <div class="news-head">
+        <div>
+          <h2>
+            <span data-lang="zh">动态</span>
+            <span data-lang="en">News</span>
+          </h2>
+          <p class="news-subtitle" data-lang="zh">
+            这里记录近期的重要更新、论文录用、项目进展与阶段性成果。
+          </p>
+          <p class="news-subtitle" data-lang="en">
+            This section highlights recent updates, paper acceptances, project milestones, and notable progress.
+          </p>
+        </div>
+      </div>
+
+      <div class="news-list">
+        <article class="news-item">
+          <div class="news-meta">
+            <span class="news-tag">
+              <span data-lang="zh">论文录用</span>
+              <span data-lang="en">Paper Accepted</span>
+            </span>
+            <span class="news-date">2026.06</span>
+          </div>
+
+          <p class="news-title" data-lang="zh">
+            一篇论文被欧洲计算机视觉会议（ECCV 2026）录用！
+          </p>
+          <p class="news-title" data-lang="en">
+            One paper was accepted by the European Conference on Computer Vision (ECCV 2026).
+          </p>
+
+          <p class="news-copy" data-lang="zh">
+            这是当前主页上的首条正式动态，后续可以继续在这里追加论文、竞赛、项目里程碑和其他重要更新。
+          </p>
+          <p class="news-copy" data-lang="en">
+            This is the first formal news item on the homepage, and more updates such as papers,
+            competitions, project milestones, or other key achievements can be added here later.
+          </p>
         </article>
       </div>
     </section>
 
-    <section class="panel" style="margin-top:18px">
-      <h2>Experience</h2>
+    <section class="publications-wrap panel" id="publications">
+      <div class="publications-head">
+        <div>
+          <h2>
+            <span data-lang="zh">论文</span>
+            <span data-lang="en">Selected Publications</span>
+          </h2>
+          <p class="publications-subtitle" data-lang="zh">
+            这里用于展示已发表或已录用的代表性论文。后续补充论文题目、作者信息、摘要与链接后，这一部分会更完整。
+          </p>
+          <p class="publications-subtitle" data-lang="en">
+            This section presents selected accepted or published papers. It can be expanded with titles,
+            author lists, abstracts, and paper links as more details become available.
+          </p>
+        </div>
+      </div>
+
+      <div class="publication-group">
+        <div class="publication-year">2026</div>
+
+        <div class="publication-list">
+          <article class="publication-card">
+            <div class="publication-meta">
+              <span class="publication-badge">ECCV 2026</span>
+              <span class="publication-date">Accepted · 2026.06</span>
+            </div>
+
+            <p class="publication-title" data-lang="zh">CMDS-AD: Cross-Modal Dual-Stream Decoupling for Few-Shot Anomaly Detection</p>
+            <p class="publication-title" data-lang="en">CMDS-AD: Cross-Modal Dual-Stream Decoupling for Few-Shot Anomaly Detection</p>
+
+            <p class="publication-authors" data-lang="zh">
+              Junhao Cai, Deyu Zeng, Junhao Pang, <strong>Junyu Chen</strong>, Qiwei Liang, Xiaopin Zhong, Zongze Wu
+            </p>
+            <p class="publication-authors" data-lang="en">
+              Junhao Cai, Deyu Zeng, Junhao Pang, <strong>Junyu Chen</strong>, Qiwei Liang, Xiaopin Zhong, Zongze Wu
+            </p>
+
+            <p class="publication-venue">European Conference on Computer Vision (ECCV), 2026</p>
+
+            <p class="publication-copy" data-lang="zh">
+              该工作面向小样本异常检测场景，提出跨模态双流解耦框架，结合 RGB 与 3D 几何信息缓解训练样本稀缺带来的性能瓶颈，
+              并通过更精细的跨模态对齐与噪声抑制提升异常检测效果。
+            </p>
+            <p class="publication-copy" data-lang="en">
+              This work targets few-shot anomaly detection by proposing a cross-modal dual-stream decoupling framework
+              that leverages both RGB cues and 3D geometric information to overcome severe data scarcity while improving
+              cross-modal alignment and anomaly localization.
+            </p>
+
+            <div class="publication-links">
+              <a href="https://github.com/Junhaocai27/CMDS-AD/tree/main" target="_blank" rel="noreferrer">Code</a>
+              <span class="publication-link-muted" data-lang="zh">Paper: Coming Soon</span>
+              <span class="publication-link-muted" data-lang="en">Paper: Coming Soon</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="projects-wrap panel" id="projects">
+      <h2>
+        <span data-lang="zh">项目展示</span>
+        <span data-lang="en">Selected Projects</span>
+      </h2>
+
+        <div class="projects">
+          <article class="project-card">
+            <span class="project-badge">ECCV 2026</span>
+            <div>
+              <strong class="project-title">
+                <span data-lang="zh">CMDS-AD: Cross-Modal Dual-Stream Decoupling for Few-Shot Anomaly Detection</span>
+                <span data-lang="en">CMDS-AD: Cross-Modal Dual-Stream Decoupling for Few-Shot Anomaly Detection</span>
+              </strong>
+              <p class="project-copy" data-lang="zh">
+                这是一个面向小样本异常检测的跨模态工作，结合 RGB 与 3D 几何信息，通过双流解耦设计、
+                跨模态语义对齐与噪声抑制机制，提升极少样本条件下的异常检测性能。
+              </p>
+              <p class="project-copy" data-lang="en">
+                This project focuses on few-shot anomaly detection by leveraging both RGB and 3D geometric cues.
+                It introduces a dual-stream decoupling design, cross-modal semantic alignment, and noise suppression
+                to improve anomaly detection under extremely limited data settings.
+              </p>
+              <p class="project-copy" data-lang="zh">
+                作者：Junhao Cai, Deyu Zeng, Junhao Pang, <strong>Junyu Chen</strong>, Qiwei Liang, Xiaopin Zhong, Zongze Wu
+              </p>
+              <p class="project-copy" data-lang="en">
+                Authors: Junhao Cai, Deyu Zeng, Junhao Pang, <strong>Junyu Chen</strong>, Qiwei Liang, Xiaopin Zhong, Zongze Wu
+              </p>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/Junhaocai27/CMDS-AD/tree/main" target="_blank" rel="noreferrer">Code</a>
+            </div>
+          </article>
+
+        <article class="project-card">
+          <span class="project-badge">Research</span>
+          <div>
+            <strong class="project-title">
+              <span data-lang="zh">工业异常检测相关项目</span>
+              <span data-lang="en">Industrial Anomaly Detection Work</span>
+            </strong>
+            <p class="project-copy" data-lang="zh">
+              如果你有异常检测、视觉质检、模型部署或工程落地相关项目，可以优先放在这里。
+            </p>
+            <p class="project-copy" data-lang="en">
+              If you have work related to anomaly detection, visual inspection,
+              model deployment, or industrial applications, this is a good place to highlight it first.
+            </p>
+          </div>
+          <div class="project-links">
+            <a href="#contact">
+              <span data-lang="zh">后续更新</span>
+              <span data-lang="en">Update Later</span>
+            </a>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <span class="project-badge">More</span>
+          <div>
+            <strong class="project-title">
+              <span data-lang="zh">更多内容预留位</span>
+              <span data-lang="en">Reserved for More Work</span>
+            </strong>
+            <p class="project-copy" data-lang="zh">
+              这个卡片可以用来放竞赛、课程设计、开源仓库，或者你想重点展示的其他成果。
+            </p>
+            <p class="project-copy" data-lang="en">
+              This slot can be used for competitions, coursework, open-source repositories,
+              or any other work you want to showcase.
+            </p>
+          </div>
+          <div class="project-links">
+            <a href="mailto:chenjunyu@gzmtu.edu.cn">Email</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="timeline-wrap panel" id="experience">
+      <h2>
+        <span data-lang="zh">经历</span>
+        <span data-lang="en">Experience</span>
+      </h2>
+
       <div class="timeline">
-        <div class="item">
-          <strong>[Your current role or school]</strong>
-          <em>2025 - Present</em>
-          <p>One short sentence about what you are doing now.</p>
-        </div>
-        <div class="item">
-          <strong>[Previous experience]</strong>
-          <em>2023 - 2025</em>
-          <p>One short sentence about your previous experience.</p>
-        </div>
+        <article class="timeline-item">
+          <div class="timeline-year">
+            <span data-lang="zh">当前</span>
+            <span data-lang="en">Present</span>
+          </div>
+          <div>
+            <strong class="timeline-title">
+              <span data-lang="zh">学术指导</span>
+              <span data-lang="en">Academic Guidance</span>
+            </strong>
+            <span class="timeline-meta">
+              <span data-lang="zh">导师：深圳大学博士后兼硕士研究生导师 曾德宇</span>
+              <span data-lang="en">Mentor: Dr. Deyu Zeng, Shenzhen University postdoctoral researcher and master's supervisor</span>
+            </span>
+            <p class="timeline-copy" data-lang="zh">
+              在曾德宇老师的指导下，我更加重视科研规范、问题意识、实验严谨性与结果可信度，
+              也在不断训练自己将研究思路转化为可落地的工程实践。
+            </p>
+            <p class="timeline-copy" data-lang="en">
+              Under Dr. Deyu Zeng's guidance, I place growing emphasis on research discipline,
+              problem awareness, experimental rigor, and trustworthy results, while also learning
+              how to turn research ideas into practical engineering work.
+            </p>
+          </div>
+        </article>
+
+        <article class="timeline-item">
+          <div class="timeline-year">
+            <span data-lang="zh">教育</span>
+            <span data-lang="en">Education</span>
+          </div>
+          <div>
+            <strong class="timeline-title">
+              <span data-lang="zh">广州航海学院 / 广州交通大学（筹） · 人工智能专业</span>
+              <span data-lang="en">Guangzhou Maritime University / Guangzhou Jiaotong University (Proposed) · Artificial Intelligence</span>
+            </strong>
+            <span class="timeline-meta">
+              <span data-lang="zh">研究兴趣：人工智能、工业异常检测、AI视觉</span>
+              <span data-lang="en">Research interests: AI, industrial anomaly detection, and AI vision</span>
+            </span>
+            <p class="timeline-copy" data-lang="zh">
+              我希望在现阶段继续夯实人工智能相关基础，积累更扎实的研究与工程训练，
+              并在未来三年后报考深圳大学机电学院硕士研究生。
+            </p>
+            <p class="timeline-copy" data-lang="en">
+              At this stage, I hope to keep strengthening my foundations in artificial intelligence,
+              build stronger research and engineering experience, and apply for a master's program at
+              Shenzhen University in about three years.
+            </p>
+          </div>
+        </article>
       </div>
     </section>
 
-    <section class="panel contact" id="contact" style="margin-top:18px">
+    <section class="contact-wrap panel" id="contact">
       <div>
-        <h2>Contact</h2>
-        <p>If you would like to collaborate, discuss ideas, or just say hello, feel free to reach out.</p>
+        <h2>
+          <span data-lang="zh">联系我</span>
+          <span data-lang="en">Contact</span>
+        </h2>
+        <p data-lang="zh">
+          如果你想交流人工智能、工业异常检测、AI视觉方向，或联系合作与学习机会，可以通过下面的信息找到我。
+        </p>
+        <p data-lang="en">
+          If you would like to discuss artificial intelligence, industrial anomaly detection,
+          AI vision, or potential collaboration and study opportunities, feel free to reach out here.
+        </p>
       </div>
+
       <div class="contact-links">
-        <a href="mailto:your_email@example.com">Email</a>
-        <a href="https://github.com/JunyuChen-Czm">GitHub</a>
-        <a href="#">CV</a>
+        <a href="mailto:chenjunyu@gzmtu.edu.cn">Email</a>
+        <a href="https://github.com/JunyuChen-Czm" target="_blank" rel="noreferrer">GitHub</a>
+        <a href="javascript:void(0)">WeChat: CjyCzm1874Cyx</a>
       </div>
     </section>
+
+    <p class="footer-note">
+      <span data-lang="zh">已接入中英文切换、基础信息与头像。后续补充简介和经历后，这个主页就能更完整上线。</span>
+      <span data-lang="en">The bilingual switcher, photo, and core profile info are in place. Once the summary and experience are added, the homepage will be ready to publish more fully.</span>
+    </p>
   </main>
+
+  <script>
+    (function () {
+      const html = document.documentElement;
+      const buttons = document.querySelectorAll("[data-set-lang]");
+      const savedLang = localStorage.getItem("homepage-lang");
+      const browserPrefersZh = navigator.language && navigator.language.toLowerCase().startsWith("zh");
+      const initialLang = savedLang || (browserPrefersZh ? "zh" : "en");
+
+      function setLang(lang) {
+        html.setAttribute("data-current-lang", lang);
+        html.setAttribute("lang", lang === "zh" ? "zh-CN" : "en");
+
+        buttons.forEach((button) => {
+          const isActive = button.getAttribute("data-set-lang") === lang;
+          button.classList.toggle("is-active", isActive);
+          button.setAttribute("aria-pressed", isActive ? "true" : "false");
+        });
+
+        localStorage.setItem("homepage-lang", lang);
+      }
+
+      buttons.forEach((button) => {
+        button.addEventListener("click", function () {
+          setLang(button.getAttribute("data-set-lang"));
+        });
+      });
+
+      setLang(initialLang);
+    })();
+  </script>
 </body>
 </html>
